@@ -1,4 +1,4 @@
-import {image} from "@/"
+
 const menu = [
     {
       id: 1,
