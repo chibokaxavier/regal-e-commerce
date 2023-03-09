@@ -7,9 +7,9 @@ import { RecoilRoot } from "recoil";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <SidebarProvider children={""}>
+    <SidebarProvider>
     {/* <ProductProvider children={""}> */}
-        <Layout children={""}>
+        <Layout>
           <Component {...pageProps} />
         </Layout>
       {/* </ProductProvider> */}
