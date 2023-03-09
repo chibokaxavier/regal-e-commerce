@@ -11,6 +11,7 @@ import React, {
 import Product from "@/components/Product";
 import menu from "@/data";
 import Link from "next/link";
+import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
   console.log(menu)
@@ -35,6 +36,7 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <Sidebar/>
     </>
   );
 }
