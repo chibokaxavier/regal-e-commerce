@@ -32,7 +32,6 @@ const SidebarProvider = ({ children }: Props) => {
   );
   return (
     <SidebarContext.Provider value={memoedValue}>
-      {" "}
       {children}
     </SidebarContext.Provider>
   );

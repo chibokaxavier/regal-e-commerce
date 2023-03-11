@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       <header className="bg-white shadow-2xl z-50">
-        <div>ghjhgh</div>
+        <div>Header</div>
         <div
           onClick={() => {
             setIsOpen(!isOpen);

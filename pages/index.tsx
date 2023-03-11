@@ -7,24 +7,18 @@ import React, {
   useContext,
   useMemo,
 } from "react";
-// import { ProductContext } from "@/contexts/ProductContext";
 import Product from "@/components/Product";
 import menu from "@/data";
 import Link from "next/link";
 import Sidebar from "@/components/Sidebar";
+import Header from "@/components/Header";
 
 export default function Home() {
-  console.log(menu)
-  // const { products } = useContext(ProductContext);
-  // const filteredProducts = products.filter((item) => {
-  //   return item.category.name === "Clothes";
-  // });
   return (
     <>
       <Head>
         <title>Regal</title>
       </Head>
-
       <div className="ml-10">
         <section className="py-16">
           <div className="">
