@@ -14,7 +14,7 @@ const Cartitem = ({ item }) => {
           <div className=" ml-2">
             <div className=" uppercase font-normal text-[18px]">{title}</div>
             <div className="flex gap-x-2 h-[36px]">
-              <div className="text-[13px] flex flex-1 max-w-[100px]  opacity-0 h-[30px] border items-center group-hover:opacity-100">
+              <div className="text-[13px] flex flex-1 max-w-[100px]   h-[30px] border items-center ">
                 <div className="flex-1 h-full flex justify-center items-center cursor-pointer px-2">
                   <IoMdRemove />{" "}
                 </div>
@@ -25,8 +25,8 @@ const Cartitem = ({ item }) => {
                   <IoMdAdd />
                 </div>
               </div>
-              <div className="text-[16px] font-semibold"># {price}</div>
-              <div className="text-[16px] font-semibold"> {`$ ${item.price * amount}`}</div>
+              <div className="text-[14px] font-semibold"># {price}</div>
+              <div className="text-[14px]  font-semibold"> {`$ ${item.price * amount}`}</div>
             </div>
           </div>
           <div className="absolute right-0 top-2 group-hover:opacity-100 opacity-0 transition ">
