@@ -16,7 +16,8 @@ const ProductDetails = () => {
   const product = { ...products };
   const id = product.id;
   const image = product.img;
-  const title = product.title
+  const title = product.title;
+  const price = product.price
   return (
     <>
       <Head>
@@ -25,11 +26,11 @@ const ProductDetails = () => {
 
       <div
         onClick={() => {
-          addToCart(products, id);
+          addToCart(products, id, title,image,price);
         }}
       >
         {/* <Image src={image} width={100} height={100} className="relative"/> */}
-        <img src={image} alt=""  />
+        <img src={image} alt="" />
       </div>
       <Sidebar />
     </>

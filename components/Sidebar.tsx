@@ -9,10 +9,6 @@ import { CartContext } from "@/contexts/CartContext";
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
   const {cart,addToCart,clearCart} = useContext(CartContext)
-  const mainCart= cart
-  // useEffect(() => {
-  //   window.localStorage.setItem("cart", JSON.stringify(mainCart));
-  // }, [cart]);
   return (
     <div
       className={`${
