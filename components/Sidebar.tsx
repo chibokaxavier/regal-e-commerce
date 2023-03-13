@@ -5,6 +5,7 @@ import { FiTrash2 } from "react-icons/fi";
 import Cartitem from "./Cartitem";
 import { SidebarContext } from "@/contexts/SidebarContext";
 import { CartContext } from "@/contexts/CartContext";
+import { uuid } from 'uuidv4';
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
@@ -26,7 +27,7 @@ const Sidebar = () => {
       </div>
       <div>
         {cart.map((item)=>{
-          return <Cartitem item={item} key={item.id}/>
+          return <Cartitem item={item} key={uuid()}/>
         })}
       </div>
       <div className="flex flex-col gap-y-3 py-4 mt-4">

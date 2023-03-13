@@ -9,7 +9,7 @@ import Image from "next/image";
 const ProductDetails = () => {
   const { addToCart } = useContext(CartContext);
   const router = useRouter();
-  const mainId = router.query.id;
+  const mainId:any = router.query.id;
   const products = menu.find((item) => {
     return item.id === parseInt(mainId);
   });

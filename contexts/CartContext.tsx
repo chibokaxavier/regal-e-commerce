@@ -12,7 +12,7 @@ interface Props {
 }
 
 interface IContext {
-  addToCart:(products:{}, id:number) =>[],
+  addToCart(products:{}, id:number):[],
   cart: [],
   removeItem(id:number): [],
   clearCart():  [],
@@ -20,15 +20,13 @@ interface IContext {
   decreaseItem(id:number):  [],
 }
 
-import menu from "@/data";
-
-export const CartContext = createContext<IContext>({
-  addToCart:()=>[],
+export const CartContext = createContext({
+  addToCart:(products:{},id:number)=> {[]},
   cart: [],
-  removeItem:()=>[],
-  clearCart:()=>[],
-  increaseItem:()=>[],
-  decreaseItem:()=>[],
+  removeItem:(id)=>{[]},
+  clearCart:(id)=>{[]},
+  increaseItem:(id)=>{[]},
+  decreaseItem:(id)=>{[]},
 });
 
 const CartProvider = ({ children }: Props) => {
