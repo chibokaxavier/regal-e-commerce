@@ -26,7 +26,7 @@ const ProductDetails = () => {
 
       <div
         onClick={() => {
-          addToCart(products, id, title,image,price);
+          addToCart(products, id);
         }}
       >
         {/* <Image src={image} width={100} height={100} className="relative"/> */}
