@@ -10,19 +10,28 @@ import React, {
 interface Props {
   children: React.ReactNode;
 }
+
+interface IContext {
+  addToCart:(products:{}, id:number) =>[],
+  cart: [],
+  removeItem(id:number): [],
+  clearCart():  [],
+  increaseItem(id:number):  [],
+  decreaseItem(id:number):  [],
+}
+
 import menu from "@/data";
 
-export const CartContext = createContext({
-  addToCart: any,
+export const CartContext = createContext<IContext>({
+  addToCart:()=>[],
   cart: [],
-  removeItem: any,
-  clearCart: any,
-  increaseItem: any,
-  decreaseItem: any,
+  removeItem:()=>[],
+  clearCart:()=>[],
+  increaseItem:()=>[],
+  decreaseItem:()=>[],
 });
 
 const CartProvider = ({ children }: Props) => {
-  // const [savedCarts] = useState(localStorage.getItem("carttt"))
   const initialRender = useRef(true);
   const localStoragekey = "cart";
   const [cart, setCart] = useState([]);
