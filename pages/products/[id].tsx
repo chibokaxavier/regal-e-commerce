@@ -16,10 +16,11 @@ const ProductDetails = () => {
   const product = { ...products };
   const id = product.id;
   const image = product.img;
+  const title = product.title
   return (
     <>
       <Head>
-        <title>Product</title>
+        <title className="capitalize">Regal/{title}</title>
       </Head>
 
       <div

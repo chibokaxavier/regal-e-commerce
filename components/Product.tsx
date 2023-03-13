@@ -26,9 +26,9 @@ const Product = ({ products, key }) => {
             <div className="text-sm capitalize text-gray-500 ">
               {category}
             </div>
-            <h2 className="font-semibold mb-1">{title}</h2>
+            <h2 className="font-semibold capitalize text-[18px]">{title}</h2>
             <h1></h1>
-            <div className="font-semibold " ># {price} </div>
+            <div className="font-semibold text-gray-500" ># {price} </div>
           </div>
         </div>
       </Link>
