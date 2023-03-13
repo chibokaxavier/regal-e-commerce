@@ -19,13 +19,13 @@ const Cartitem = ({ item }) => {
             </div>
             <div className="lg:flex h-[36px] lg:mt-12 mt-4 ">
               <div className="text-[13px] flex flex-1 max-w-[100px] lg:mt-1  h-[25px] border items-center ">
-                <div  onClick={()=>{decreaseItem(id)}} className="flex-1 h-full flex justify-center items-center cursor-pointer px-2">
+                <div  onClick={()=>{decreaseItem(id, price, img, amount,title)}} className="flex-1 h-full flex justify-center items-center cursor-pointer px-2">
                   <IoMdRemove />{" "}
                 </div>
                 <div className="h-full flex justify-center items-center px-2">
                   {amount}
                 </div>
-                <div onClick={()=>{increaseItem(id)}} className="flex-1 h-full flex justify-center items-center cursor-pointer px-2">
+                <div onClick={()=>{increaseItem(id, price, img, amount,title)}} className="flex-1 h-full flex justify-center items-center cursor-pointer px-2">
                   <IoMdAdd />
                 </div>
               </div>
@@ -40,7 +40,7 @@ const Cartitem = ({ item }) => {
             </div>
           </div>
           <div className="absolute right-0 top-1 lg:group-hover:opacity-100 lg:opacity-0 transition ">
-            <BsTrash onClick={()=>removeItem(id)} className="hover:text-red-700 transition cursor-pointer" />
+            <BsTrash onClick={()=>removeItem(id, price, img, amount,title)} className="hover:text-red-700 transition cursor-pointer" />
           </div>
         </div>
       </div>
