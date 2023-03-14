@@ -7,3 +7,9 @@
       @apply  !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-gray-300;
     }
 }
+
+@layer components{
+    .header{
+        @apply hidden lg:block cursor-pointer font-semibold hover:text-gray-400 transition
+    }
+}

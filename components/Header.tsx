@@ -21,11 +21,11 @@ const Header = () => {
               />
             </div>
           </Link>
-          <div className="hidden lg:block cursor-pointer">ALL PRODUCTS</div>
-          <div className="hidden lg:block cursor-pointer">BARGAIN SHOP </div>
-          <div className="hidden lg:block cursor-pointer">SAHSES X HIDES LAGOS</div>
-          <div className="hidden lg:block cursor-pointer">KIDS</div>
-          <div className="hidden lg:bloc cursor-pointerk">ABOUT</div>
+          <div className="header">ALL PRODUCTS</div>
+          <div className="header">BARGAIN SHOP </div>
+          <div className="header">SAHSES X HIDES LAGOS</div>
+          <div className="header">KIDS</div>
+          <div className="header">ABOUT</div>
           <div
             onClick={() => {
               setIsOpen(!isOpen);
