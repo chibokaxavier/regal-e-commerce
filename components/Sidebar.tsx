@@ -9,7 +9,7 @@ import { uuid } from "uuidv4";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart, addToCart, clearCart,total } = useContext(CartContext);
+  const { cart, addToCart, clearCart,total,itemAmount } = useContext(CartContext);
   return (
     <div
       className={`${
@@ -18,7 +18,7 @@ const Sidebar = () => {
     >
       <div className="flex items-center justify-between py-6 border-b ">
         <div className="uppercase text-sm font-semibold">
-          Shopping Cart ({cart.length})
+          Shopping Cart ({itemAmount})
         </div>
         <div
           className="cursor-pointer w-8  h-8 flex justify-center items-center"
