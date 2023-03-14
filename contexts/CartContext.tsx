@@ -18,6 +18,8 @@ interface IContext {
   clearCart():  [],
   increaseItem(id:number):  [],
   decreaseItem(id:number):  [],
+  itemAmount:number,
+  total:number
 }
 
 export const CartContext = createContext({
@@ -27,12 +29,36 @@ export const CartContext = createContext({
   clearCart:(id)=>{[]},
   increaseItem:(id)=>{[]},
   decreaseItem:(id)=>{[]},
+  itemAmount: null,
+  total:null
 });
 
 const CartProvider = ({ children }: Props) => {
   const initialRender = useRef(true);
   const localStoragekey = "cart";
   const [cart, setCart] = useState([]);
+  const [itemAmount,setItemAmount] = useState(0)
+  const [total,setTotal] = useState(0)
+
+
+  useEffect(()=>{
+    if (cart) {
+      const total = cart.reduce((accumulator,currentItem)=>{
+        return accumulator + currentItem.price *currentItem.amount
+      },0)
+      setTotal(total)
+    }
+      },[cart])
+
+  useEffect(()=>{
+if (cart) {
+  const amount = cart.reduce((accumulator,currentItem)=>{
+    return accumulator + currentItem.amount
+  },0)
+  setItemAmount(amount)
+}
+  },[cart])
+
 
   useEffect(() => {
     if (JSON.parse(localStorage.getItem(localStoragekey))) {
@@ -106,8 +132,10 @@ const CartProvider = ({ children }: Props) => {
       clearCart,
       increaseItem,
       decreaseItem,
+      itemAmount,
+      total
     }),
-    [cart, addToCart, removeItem, clearCart, increaseItem, decreaseItem]
+    [cart, addToCart, removeItem, clearCart, increaseItem, decreaseItem,itemAmount,total]
   );
   return (
     <CartContext.Provider value={memoedValue}>{children}</CartContext.Provider>

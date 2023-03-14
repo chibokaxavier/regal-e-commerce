@@ -8,7 +8,7 @@ const Cartitem = ({ item }) => {
   const {removeItem,increaseItem,decreaseItem} = useContext(CartContext)
   return (
     <>
-      <div className="flex max-h-[300px] w-full group mt-4  border-gray-300 border-b hover:shadow-2xl transition duration-500 p-4 lg:px-6">
+      <div className="flex max-h-[300px] w-full group mt-4  border-gray-300 border-b transition duration-500 p-4 lg:px-6">
         <div>
           <img src={img} className="max-h-[150px] max-w-[150px]" alt="" />
         </div>
