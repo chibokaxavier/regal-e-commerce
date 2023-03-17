@@ -25,7 +25,7 @@ const ProductDetails = () => {
         <title className="capitalize">Regal/{title}</title>
       </Head>
       <div className="h-screen   lg:pb-32 pb-12 pt-[50px] flex items-center justify-center px-10 font-serif">
-        <div className="flex flex-col  lg:flex-row items-center justify-between lg:pt-[180px]">
+        <div className="flex flex-col  lg:flex-row items-center justify-between pt-[100px] lg:pt-[180px]">
           <div className="flex flex-1 justify-center items-center mb-8 lg:mb-0 h-[500px] ">
             <img src={image} alt="" className="max-w-[200px] h-full lg:max-w-sm" />
           </div>
