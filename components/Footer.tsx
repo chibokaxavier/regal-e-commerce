@@ -1,10 +1,10 @@
 import React from "react";
+import { BsFacebook, BsInstagram, BsTwitch, BsTwitter, BsWhatsapp } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <footer className="bg-black/90 w-full p-4 pt-10  text-white ">
       <div className="lg:flex lg:justify-between  h-fit lg:mx-[100px] ">
-
         <div className="py-4">
           <img
             className="lg:h-[200px] lg:w-[200px] h-[100px] w-[100px]"
@@ -12,6 +12,21 @@ const Footer = () => {
             alt=""
           />
           <p className="py-4">Your best choice for your wears.</p>
+          <div className="flex">
+            <div className="cursor-pointer mx-4">
+              <a href="https://www.instagram.com/regalbysylvia/" target='_blank'>  <BsInstagram /> </a>
+            
+            </div>
+            <div className="cursor-pointer mx-4">
+              <BsTwitter />
+            </div>
+            <div className="cursor-pointer mx-4">
+              <BsFacebook />
+            </div>
+            <div className="cursor-pointer mx-4">
+              <BsWhatsapp/>
+            </div>
+          </div>
         </div>
 
         <div className="py-4">
@@ -57,10 +72,11 @@ const Footer = () => {
             chibokaxavier@gmail.com
           </div>
         </div>
-
       </div>
       <hr />
-      <div className="flex justify-center items-center p-6 text-sm"> Copyright  2023 Regal</div>
+      <div className="flex justify-center items-center p-6 text-sm">
+        <div className="pr-10">Copyright <span>&#169;</span> 2023 Regal</div>
+      </div>
     </footer>
   );
 };

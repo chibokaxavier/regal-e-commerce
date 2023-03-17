@@ -34,7 +34,7 @@ const Header = () => {
           >
             {/* <div className=""> CART</div> */}
             <BsBag className="h-7 w-7" />
-            <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] h-[18px] w-[18px] rounded-full  text-white flex justify-center items-center">
+            <div className="bg-black absolute -right-2 -bottom-2 text-[12px] h-[18px] w-[18px] rounded-full  text-white flex justify-center items-center">
               {itemAmount}
             </div>
           </div>

@@ -12,12 +12,12 @@ const Product = ({ products, key }) => {
           <div className="border-2 border-gray-200 lg:w-[20vw] md:w-[40vw] w-[80vw] h-[300px] mb-4 relative overflow-hidden group transition">
             <div className="w-full h-full flex justify-center items-center ">
               {/* image */}
-              <div className="w-[200px]  flex items-center justify-center">
+              <div className="w-full  flex items-center justify-center">
                 <img
                   src={img}
                   alt=""
                   srcSet=""
-                  className="max-h-[160px] group-hover:scale-110 transition duration-300"
+                  className=" w-full h-[300px] group-hover:scale-110  transition duration-300"
                 />
               </div>
             </div>
@@ -28,7 +28,7 @@ const Product = ({ products, key }) => {
             </div>
             <h2 className="font-semibold capitalize text-[18px]">{title}</h2>
             <h1></h1>
-            <div className="font-semibold text-gray-500" ># {price} </div>
+            <div className="font-semibold text-gray-500" > &#8358; {price} </div>
           </div>
         </div>
       </Link>

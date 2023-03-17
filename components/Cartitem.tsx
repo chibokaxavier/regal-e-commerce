@@ -8,7 +8,7 @@ const Cartitem = ({ item }) => {
   const {removeItem,increaseItem,decreaseItem} = useContext(CartContext)
   return (
     <>
-      <div className="flex max-h-[300px] w-full group mt-4  border-gray-300 border-b transition duration-500 p-4 lg:px-6">
+      <div className="flex max-h-[300px] w-full group   border-gray-300 border-b transition duration-500 px-4 py-2 lg:px-6">
         <div>
           <img src={img} className="max-h-[150px] max-w-[150px]" alt="" />
         </div>
@@ -31,10 +31,10 @@ const Cartitem = ({ item }) => {
               </div>
               <div className="flex lg:block lg:mt-0 mt-4 justify-between">
                 <div className="text-[13px] font-semibold lg:mt-2 lg:flex lg:items-center lg:justify-center text-gray-500 ml-2">
-                  # {price}
+                   &#8358; {price}
                 </div>
                 <div className="text-[13px] w-[10%] font-semibold pr-4 lg:absolute lg:right-0 lg:bottom-2 lg:pl-0">
-                  #{`${item.price * amount}`}
+                   &#8358;{`${item.price * amount}`}
                 </div>
               </div>
             </div>

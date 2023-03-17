@@ -9,7 +9,17 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'bounce': 'bounce 3s linear 1',
+      },
+      keyframes: {
+        bounce: {
+          '0%, 100%': { transform: 'translateX(-25%)' },
+          '50%': { transform: 'translateX(0)' },
+        }
+      }
+    },
   },
   plugins: [
     require('tailwind-scrollbar-hide'),

@@ -24,26 +24,30 @@ const ProductDetails = () => {
       <Head>
         <title className="capitalize">Regal/{title}</title>
       </Head>
-      <div className="h-screen lg:pt-[100px]  lg:pb-32 pb-12 pt-[50px] flex items-center justify-center px-10">
-        <div className="flex flex-col  lg:flex-row items-center justify-center">
-          <div className="flex flex-1 justify-center items-center mb-8 lg:mb-0">
-            <img src={image} alt="" className="max-w-[200px] lg:max-w-sm" />
+      <div className="h-screen   lg:pb-32 pb-12 pt-[50px] flex items-center justify-center px-10 font-serif">
+        <div className="flex flex-col  lg:flex-row items-center justify-between lg:pt-[180px]">
+          <div className="flex flex-1 justify-center items-center mb-8 lg:mb-0 h-[500px] ">
+            <img src={image} alt="" className="max-w-[200px] h-full lg:max-w-sm" />
           </div>
 
-          <div className="flex-col flex items-center justify-center  lg:text-left lg:ml-10">
-            <h1 className="text-[26px] font-medium  mb-2  max-w-[450px] uppercase">
+          <div className="flex-col flex h-[500px] lg:block  justify-center items-center space-y-8 lg:text-left lg:ml-[200px] lg:pt-0">
+            <div>
+            <h1 className="text-[26px] font-light  max-w-[450px] uppercase">
               {title}
             </h1>
-            <div className="text-xl text-red-500 font-medium  mb-6">
-              # {price}
             </div>
-            <p>{desc}</p>
-            <div className="pt-7">
+          
+            <div className="text-xl font-medium  mb-6">
+               &#8358; {price}
+            </div>
+            <p className="font-serif">{desc}</p>
+            <div className="p-4 text-green-500 border-2 w-[250px] flex items-center justify-center text-sm cursor-pointer">ORDER VIA WHATSAPP</div>
+            <div className="">
               <button
                 onClick={() => {
                   addToCart(products, id);
                 }}
-                className="p-4 bg-black text-white font-semibold"
+                className="p-4 w-[250px] bg-black text-white font-semibold"
               >
                 {" "}
                 ADD TO CART
