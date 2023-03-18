@@ -27,7 +27,7 @@ const Sidebar = () => {
           <IoMdArrowForward />
         </div>
       </div>
-      <div className="h-[600px] lg:h-[480px] flex flex-col overflow-y-auto scrollbar-hide ">
+      <div className="h-[450px] lg:h-[480px] flex flex-col overflow-y-auto scrollbar-hide ">
         {cart.map((item) => {
           return <Cartitem item={item} key={uuid()} />;
         })}

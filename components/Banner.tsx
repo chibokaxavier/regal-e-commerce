@@ -6,7 +6,7 @@ const Banner = () => {
   return (
     <>
       <div className="relative">
-        <div className=" bg-slate-600 lg:h-[86vh] lg:w-[100vw]  w-[100vw] h-[200px] ml-0 bg-image">
+        <div className=" bg-slate-600 lg:h-[86vh] lg:w-[100vw]  w-[100vw] h-[70vh] ml-0 bg-image">
           {/* <Image
             src="https://images.pexels.com/photos/3189024/pexels-photo-3189024.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt=""
